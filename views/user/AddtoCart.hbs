@@ -1,0 +1,21 @@
+<div class="container-fluid  py-5" style="min-height: 100vh;">
+{{#each result}}
+<div class="card shadow mx-auto  mb-2" style="width: 90vw; height: 200px;">
+  <div class="card-body d-flex">
+    <div>
+    <img src="/images/product/{{this.finalproduct.ProductImage}}" alt="{{result.finalproduct.ProductName}}" style="max-width: 150px; height: auto;">
+    </div>
+    <div style="width: 850px;" class="ml-4">
+ <p><strong>Product Name:</strong> {{this.finalproduct.ProductName}}</p>
+      <p><strong>Description:</strong> {{this.finalproduct.Descrption}}</p>
+      <p><strong>Price:</strong> {{this.finalproduct.Price}}</p>
+    </div>
+    <div>
+    <h2>User Details:</h2>
+      <p><strong>Username:</strong> {{this.finalUser.username}}</p>
+      <p><strong>Email:</strong> {{this.finalUser.email}}</p>
+    </div>
+  </div>
+</div>
+{{/each}}
+</div>

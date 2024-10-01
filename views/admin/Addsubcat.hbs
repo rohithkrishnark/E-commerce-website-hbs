@@ -1,0 +1,25 @@
+<div class="container-fluid" style="background-color: #778da9; height:100vh;padding-top:10px;">
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+  <strong>Note:</strong> Please Add item correctly epozhum matan pattilla.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="width: 10px; height: 10px;  margin-left: 10px;"></button>
+</div>
+  <div class="container  py-3 mt-5 shadow bg-light  rounded" style="width: 60%;">
+    <h3 class="mb-2 text-secondary">ADD SUB CATEGORIES🧾</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="" class="form-label fs-5 ">Categories Name:</label>
+        <select name="categories" class="form-select" id="category">
+            <option value="">select</option>
+            {{#each data}}
+                <option value="{{this._id}}">{{this.categoryName}}</option>
+            {{/each}}
+        </select>
+      </div>
+      <div>
+        <label for="" class="form-label fs-5 mt-2">Sub Categories:</label>
+        <input type="text" placeholder="Enter the subcategory" class="form-control" name="subcat">
+      </div>
+      <button type="submit" class="btn btn-warning mt-2">ADD CATEGORY</button>
+    </form>
+  </div>
+</div>

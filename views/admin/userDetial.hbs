@@ -1,0 +1,27 @@
+    <div class="container py-5"  >
+    <p style="font-size: 24px;"><b>TotalNumberOFproduct:  {{TotalProduct}}</b></p>
+    {{#if products}}
+    <table class="table shadow mt-2 rounded">
+      <tr>
+        <th class="">Product Ordered</th>
+      </tr>
+      {{#each products}}
+    <tr>
+      <td>
+        <div style="width: 800px;">
+            <p>{{this.finalproduct.ProductName}}</p>
+            <p>{{this.finalproduct.Descrption}}</p>
+        </div>
+      </td>
+      <td><a href="/admin/view/{{this._id}}" class="btn btn-primary">View</a></td>
+      <td><a href="" class="btn btn-danger">Confirm Order</a></td>
+    </tr>
+      {{/each}}
+    </table>
+    {{else}}
+    <img src="/images/noordre.webp" width="500px" alt="">
+    <br>
+    <p class="fs-3" style="margin-left: 120px;">Waiting for Orders⏳</p>
+    {{/if}}
+
+</div>

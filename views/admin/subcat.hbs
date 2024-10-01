@@ -1,0 +1,32 @@
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="bg-light shadow p-3 text-white" style="width: 250px; height:91vh;position:fixed">
+    <div class="nav flex-column">
+      <a href="/admin/category" class="btn btn-dark mb-2">Categories🔰</a>
+      <a href="/admin/product" class="btn btn-dark mb-2">Product🔰</a>
+      <a href="/admin/subcat" class="btn btn-dark mb-2">Subcategories🔰</a>
+      <a href="/admin/users" class="btn btn-dark mb-2">Users🔰</a>
+    </div>
+  </div>
+  <div class="flex-grow-1 p-3"style="width: 750px; margin-left:250px">
+    <a href="/admin/addsub" class="btn btn-outline-danger">Add SubCategories</a>
+
+    <table class="table shadow mt-2 rounded">
+  <tr class="shadow" style="border-bottom: 2px solid green;">
+    <th>CategoryName</th>
+    <th>SubCategories</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  {{#each data}}
+<tr class="shadow">
+    <td class="align-middle">{{this.FinalData.categoryName}}</td>
+    <td class="align-middle">{{this.SubCatgories}}</td>
+    <td class="align-middle"><a href="/admin/editsub/{{this._id}}" class="btn btn-primary">Edit</a></td>
+    <td class="align-middle"><a href="/admin/subcat/{{this._id}}" class="btn btn-danger">Delete</a></td>
+</tr>
+
+  {{/each}}
+</table>
+  </div>
+</div>

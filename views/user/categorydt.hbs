@@ -1,0 +1,27 @@
+<div class="container-fluid px-5 mt-2">
+    <h2 style="font-family: Arial, Helvetica, sans-serif;" class="mb-2">{{categoryName}}</h2>
+    <div class="container-fluid">
+        <div class="row mb-4">
+            {{#if data}}
+                {{#each data}}
+                    <div class="col-xl-3 col-lg-6 mb-2 col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="card shadow rounded px-2" style="width: 22rem; height:420px">
+                            <img src="/images/product/{{this.ProductImage}}" height="160px" style="object-fit: contain;" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title">{{this.ProductName}}</h5>
+                                <p class="card-text" style="overflow-y: hidden; height:90px">{{this.Descrption}}</p>
+                                <p class="card-text">{{this.Price}}</p>
+                                <a href="/productDetail/{{this._id}}" class="btn btn-primary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            {{else}}
+                <div class="no-data-container mt-5 d-flex flex-column align-items-center justify-content-center" style="height: 300px; text-align: center;">
+                    <img src="/images/undraw_no_data_re_kwbl.svg" alt=" No data found" style="width: 150px; height: 150px;">
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; margin-top: 20px;">Oops! No products found.</p>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

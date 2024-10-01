@@ -1,0 +1,40 @@
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="bg-light shadow p-3 text-white" style="width: 250px; height:91vh;position:fixed">
+    <div class="nav flex-column">
+     <a href="/admin/category" class="btn btn-dark mb-2">Categories🔰</a>
+      <a href="/admin/product" class="btn btn-dark mb-2">Product🔰</a>
+      <a href="/admin/subcat" class="btn btn-dark mb-2">Subcategories🔰</a>
+      <a href="/admin/users" class="btn btn-dark mb-2">Users🔰</a>
+    </div>
+  </div>
+  <div class="flex-grow-1 p-3"style="width: 750px;  margin-left:250px">
+<h1>Product page</h1>
+<a href="/admin/addproduct" class="btn btn-outline-dark mb-2">Add Products</a>
+
+  <table class="table shadow">
+    <tr>
+      <th>ProdcutName</th>
+      <th>Descritption</th>
+      <th>Price</th>
+      <th>Categories</th>
+      <th>SubCategories</th>
+      <th>Image</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+{{#each data}}
+    <tr>
+      <td>{{this.ProductName}}</td>
+      <td>{{this.Descrption}}</td>
+      <td>{{this.Price}}</td>
+      <td>{{this.Newresult.categoryName}}</td>
+      <td>{{this.Finalresult.SubCatgories}}</td>
+      <td><img src="/images/product/{{this.ProductImage}}" width="100px" height="100px" alt=""></td>
+      <td><a href="/admin/editprdt/{{this._id}}" class="btn btn-success">Edit</a></td>
+      <td><a href="/admin/product/{{this._id}}" class="btn btn-primary">Delete</a></td>
+    </tr>
+{{/each}}
+  </table>
+  </div>
+</div>

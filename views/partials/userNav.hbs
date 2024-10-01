@@ -1,0 +1,77 @@
+<style>
+  .showcase {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(216, 216, 216);
+    position: absolute;
+    margin-left: 1375px;
+    z-index: 9999999;
+    margin-top: -25px;
+    border-radius: 50%;
+    border: 1px solid rgb(228, 0, 0);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .item {
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    margin-top: 15px;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .search-bar input[type="search"] {
+    margin-right: 5px;
+    width: 400px; /* Increased width */
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow sticky-top">
+  {{#if totalItem}}
+    <div class="showcase">
+      <p style="font-size:12px" class="item">{{totalItem}}</p>
+    </div>
+  {{/if}}
+  <a class="navbar-brand" href="/">Am🎯Kart</a>
+  <form action="">
+  <div class="search-bar">
+    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-dark" type="submit">⌕</button>
+  </div>
+  </form>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/odernow">🛒</a>
+      </li>
+      <li class="nav-item me-3" >
+        <a class="nav-link" href="/mycart">
+          <i class="fas fa-cart-plus mr-2 text-dark"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    {{#if user}}
+      <a  href="/logout" class="btn btn-outline-primary">LogOut</a>
+    {{else}}
+      <a href="/register" class="btn btn-outline-primary">Register</a>
+      <a href="/login" class="btn btn-outline-primary">Login</a>
+    {{/if}}
+  </div>
+</nav>

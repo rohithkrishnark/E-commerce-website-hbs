@@ -1,0 +1,101 @@
+<style>
+  .timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #dee2e6;
+  }
+  .timeline-item {
+    position: relative;
+    padding: 1rem 0;
+    padding-left: 2rem;
+  }
+  .timeline-point {
+    position: absolute;
+    left: 0;
+    top: 1.25rem;
+    width: 10px;
+    height: 10px;
+    background: #007bff;
+    border-radius: 50%;
+  }
+  .timeline-date {
+    font-weight: bold;
+  }
+  .timeline-content {
+    margin-top: 0.5rem;
+  }
+  .timeline-item-highlighted {
+    background-color: #d1ecf1;
+    border-left: 3px solid #0c5460;
+  }
+  .timeline-item-highlighted .timeline-point {
+    background: #0c5460;
+  }
+  .timeline-item-highlighted .timeline-date,
+  .timeline-item-highlighted .timeline-content {
+    color: #0c5460;
+  }
+</style>
+
+
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Ordered Products Section -->
+    <div class="col-xl-6 mb-4">
+      <h4 class="mb-3">Ordered Products</h4>
+      {{#each orderedItems}}
+        <div class="d-flex shadow mb-3 py-3" style="width: 100%; height: 150px;">
+          <div class="mt-2 ms-2">
+            <img
+              class="ms-0"
+              src="/images/product/{{this.finalproduct.ProductImage}}"
+              alt="{{this.finalproduct.ProductName}}"
+              style="max-width: 100px; height: 100px; object-fit: contain;"
+            />
+          </div>
+          <div class="ms-3 mt-2">
+            <p><strong>Product Name:</strong> {{this.finalproduct.ProductName}}</p>
+            <p><strong>Price:</strong> {{this.finalproduct.Price}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+    <!-- Shipping Timeline Section -->
+    <div class="col-xl-6">
+      <h4 class="mb-3">Shipping Timeline</h4>
+      <ul class="timeline">
+        <li class="timeline-item timeline-item-highlighted">
+          <span class="timeline-point"></span>
+          <span class="timeline-date">Order Placed</span>
+          <span class="timeline-content">Your order has been placed successfully.</span>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-point"></span>
+          <span class="timeline-date">Order Processed</span>
+          <span class="timeline-content">We are preparing your order for shipment.</span>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-point"></span>
+          <span class="timeline-date">Shipped</span>
+          <span class="timeline-content">Your order is on the way.</span>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-point"></span>
+          <span class="timeline-date">Delivered</span>
+          <span class="timeline-content">Your order has been delivered.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

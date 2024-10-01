@@ -1,0 +1,98 @@
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="bg-light shadow p-3 text-white" style="width: 250px; height:91vh; position: fixed;">
+    <div class="nav flex-column">
+      <a href="/admin/category" class="btn btn-dark mb-2">Categories🔰</a>
+      <a href="/admin/product" class="btn btn-dark mb-2">Product🔰</a>
+      <a href="/admin/subcat" class="btn btn-dark mb-2">Subcategories🔰</a>
+      <a href="/admin/users" class="btn btn-dark mb-2">Users🔰</a>
+    </div>
+  </div>
+  <div class="flex-grow-1 p-3" style="width: calc(100% - 250px); margin-left: 250px;">
+    <h1 class="mb-4">Dashboard</h1>
+
+    <!-- Row with Cards -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Total Categories</h5>
+            <p class="card-text">Number of categories: {{totalCategories}}</p>
+            <a href="/admin/category" class="btn btn-primary">View Categories</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Total Products</h5>
+            <p class="card-text">Number of products: {{totalproduct}}</p>
+            <a href="/admin/product" class="btn btn-primary">View Products</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Total Subcategories</h5>
+            <p class="card-text">Number of subcategories: {{totalSubCategories}}</p>
+            <a href="/admin/subcat" class="btn btn-primary">View Subcategories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alerts -->
+    <div class="alert alert-info" role="alert">
+      <strong>Note:</strong> Please ensure all categories and products are updated regularly.
+    </div>
+
+    <!-- Table -->
+                <div class="canvas-container">
+                    <canvas id="myChart" width="1046" height="300"></canvas>
+                </div>
+
+  </div>
+</div>
+
+<!-- Add Bootstrap CSS and JS links if not already included -->
+
+ <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar', // Example chart type
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>

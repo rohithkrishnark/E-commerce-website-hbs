@@ -1,0 +1,27 @@
+<div class="container-fluid" style="background-color: #778da9; height:100vh;padding-top:120px;">
+  <div class="container  py-3 shadow bg-light  rounded" style="width: 60%;">
+    <h3 class="mb-2 text-secondary">ADD CATEGORIES🧾</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="" class="form-label fs-5 ">Categories Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="enter the name"
+          name="catgry"
+          value="{{data.categoryName}}"
+        />
+      </div>
+      <div>
+        <label for="" class="form-label fs-5 mt-2">Description:</label>
+        <textarea class="form-control" name="description" id="">{{data.Description}}</textarea>
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">Image:</label>
+        <input type="file" class="form-control" name="picture" />
+        <img src="/images/categories/{{data.image}}" width="100px " height="100px" alt="">
+      </div>
+      <button type="submit" class="btn btn-success mt-2">ADD CATEGORY</button>
+    </form>
+  </div>
+</div>

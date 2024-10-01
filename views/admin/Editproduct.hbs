@@ -1,0 +1,82 @@
+<div
+  class="container-fluid"
+  style="background-color: #778da9; min-height:100vh;padding-top:10px;"
+>
+  <div class="container py-3 shadow bg-light rounded" style="width: 60%;">
+    <h3 class="mb-2 text-secondary">ADD PRODUCT📦</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="" class="form-label fs-5">Product Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="enter the name"
+          name="prdtname"
+          value="{{final_data.ProductName}}"
+        />
+      </div>
+      <div>
+        <label for="" class="form-label fs-5 mt-2">Description:</label>
+        <textarea class="form-control" name="description" id="">{{final_data.Descrption}}</textarea>
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">Price:</label>
+        <input type="text" class="form-control" name="price" value="{{final_data.Price}}" />
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">CategoryName:</label>
+        <select name="category" class="form-select" id="category">
+          <option value="">select</option>
+          {{#each data}}
+            <option value="{{this._id}}">{{this.categoryName}}</option>
+          {{/each}}
+        </select>
+        <input type="hidden" name="" id="catinput" value="{{final_data.Category}}">
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">SubCategory:</label>
+        <select name="subCat" class="form-select" id="subcategory">
+          <option value="">select</option>
+          {{#each result}}
+            <option value="{{this._id}}">{{this.SubCatgories}}</option>
+          {{/each}}
+        </select>
+          <input type="hidden" name="" id="subinput" value="{{final_data.SubCategory}}">
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">Image:</label>
+        <input type="file" name="prdtimage" class="form-control" />
+        <img src="/images/product/{{final_data.ProductImage}}" width="100px" height="100px" alt="">
+      </div>
+      <button type="submit" class="btn btn-success mt-2">ADD CATEGORY</button>
+    </form>
+  </div>
+</div>
+
+<script>
+    let catinput = document.getElementById("catinput").value;
+    let subinput = document.getElementById("subinput").value
+    console.log(subinput)
+    let category = document.getElementById("category");
+    let subCategory = document.getElementById("subcategory");
+
+
+    let optioncat = category.options;
+    let optionsucat = subCategory.options;
+
+
+    for(let i = 0 ; i < optioncat.length;i++){
+        if(optioncat[i].value == catinput){
+            optioncat[i].selected = true
+            break
+        }
+    }
+
+    for(let j = 0; j < optionsucat.length;j++){
+        if(optionsucat[j].value == subinput){
+            optionsucat[j].selected = true
+            break
+        }
+    }
+
+</script>

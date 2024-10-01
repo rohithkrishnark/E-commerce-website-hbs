@@ -1,0 +1,50 @@
+<div
+  class="container-fluid"
+  style="background-color: #778da9; height:100vh;padding-top:10px;"
+>
+  <div class="container py-3 shadow bg-light rounded" style="width: 60%;">
+    <h3 class="mb-2 text-secondary">ADD PRODUCT📦</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="" class="form-label fs-5">Product Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="enter the name"
+          name="prdtname"
+        />
+      </div>
+      <div>
+        <label for="" class="form-label fs-5 mt-2">Description:</label>
+        <textarea class="form-control" name="description" id=""></textarea>
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">Price:</label>
+        <input type="text" class="form-control" name="price" />
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">CategoryName:</label>
+        <select name="category" class="form-select" id="category">
+          <option value="">select</option>
+          {{#each data}}
+            <option value="{{this._id}}">{{this.categoryName}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">SubCategory:</label>
+        <select name="subCat" class="form-select" id="category">
+          <option value="">select</option>
+          {{#each result}}
+            <option value="{{this._id}}">{{this.SubCatgories}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div>
+        <label for="" class="form-label fs-5">Image:</label>
+        <input type="file" name="prdtimage" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-success mt-2">ADD CATEGORY</button>
+    </form>
+  </div>
+</div>
