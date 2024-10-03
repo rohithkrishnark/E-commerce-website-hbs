@@ -29,7 +29,6 @@ Overall, this e-commerce website aims to deliver an engaging and user-friendly o
 
 
 
-
 <div align="center"> 
 <h2>Technologies </h2>
 
@@ -46,3 +45,35 @@ Overall, this e-commerce website aims to deliver an engaging and user-friendly o
 </div>
 
 # The Art 💖😍
+
+![Screenshot (44)](https://github.com/user-attachments/assets/12a378db-6c36-4b5d-8ede-6b536b6700ff)
+![Screenshot (45)](https://github.com/user-attachments/assets/ec8a1ebd-ec01-4448-bf20-9f66ebb48e2e)
+![Screenshot (46)](https://github.com/user-attachments/assets/c38a62c5-8c6b-434e-832f-0e05c96ab303)
+![Screenshot (47)](https://github.com/user-attachments/assets/4aadbc7c-7f7a-4806-b150-25346661d252)
+![Screenshot (48)](https://github.com/user-attachments/assets/6bbd62ab-4be0-4d4d-a554-af51694d410d)
+![Screenshot (49)](https://github.com/user-attachments/assets/d3ffd9a0-2bbc-461d-bed4-6d0c21b8ccbd)
+![Screenshot (51)](https://github.com/user-attachments/assets/4a82f5ca-de3d-460a-9d00-6bdbd9482a69)
+![Screenshot (52)](https://github.com/user-attachments/assets/f1684501-2d62-4b3c-835b-8c6dfefafb2e)
+![Screenshot (53)](https://github.com/user-attachments/assets/5ce36620-f8b3-40cc-9f2a-b1bfa804aa0c)
+
+
+## Prerequisites 😉
+
+What things you need to run the app
+
+```
+* Vscode/Sublime Text IDE
+* Node.js and npm:
+* Express js
+* Mongodb Community Server 
+```
+## Built With ❤️❤️❤️
+
+- [Visual studio Code ](https://code.visualstudio.com/download) - How to install Android Studio
+- [Express js](https://expressjs.com/) - Express Official website
+- [Node](https://nodejs.org/docs/latest/api/) - Node Official website
+- [Mongodb](https://www.mongodb.com/docs/) - Mongodb Official website
+
+
+
+
